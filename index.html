@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.content {
+			margin: 20px auto;
+			width: 400px;
+		}
+
+		#chat-history {
+			height: 200px;
+			border: 1px solid #eee;
+			overflow: auto;
+		}
+
+		.write-message {
+			margin-top: 10px;
+		}
+
+		#message {
+			width: 340px;
+			outline: none;
+		}
+
+		.btn-send {
+			float: right;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div id="chat-history"></div>
+		<div class="write-message">
+			<input type="text" id="message">
+			<button class="btn-send" onclick="sendMessage()">Send</button>
+		</div>
+	</div>
+	<script src="/script.js"></script>
+</body>
+</html>
