@@ -10,7 +10,7 @@ const app = express(),
 	wss = new WebSocket.Server({ server });
 
 app.get('/', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
-app.use(express.static(path.join(__dirname, 'pub')));
+app.use(express.static(path.join(__dirname)));
 
 wss.on('connection', (ws, req) => {
 	noticeAllClients(wss.clients, `New client in town. Currently there are ${wss.clients.size} clients online.`)

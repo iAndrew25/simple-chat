@@ -1,4 +1,4 @@
-const socket = new WebSocket('ws://is-offline:8080');
+const socket = new WebSocket(`ws://${window.location.host}`);
 const message = document.getElementById('message');
 const chat = document.getElementById('chat-history');
 
